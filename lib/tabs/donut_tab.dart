@@ -7,8 +7,8 @@ class DonutTab extends StatelessWidget {
   final List donutsOnSale = [
     ["Ice Cream", "36", Colors.blue, "lib/images/icecream_donut.png"],
     ["Strawberry", "45", Colors.red, "lib/images/strawberry_donut.png"],
-    ["Grape Ape", "84", Colors.red, "lib/images/grape_donut.png"],
-    ["Chocolate", "45", Colors.red, "lib/images/chocolate_donut.png"],
+    ["Grape Ape", "84", Colors.purple, "lib/images/grape_donut.png"],
+    ["Chocolate", "45", Colors.brown, "lib/images/chocolate_donut.png"],
   ];
   DonutTab({super.key});
 
@@ -21,7 +21,9 @@ class DonutTab extends StatelessWidget {
       // Organizes the grid
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         // Number of columns
-        crossAxisCount: 2),
+        crossAxisCount: 2,
+        // Aspect ratio
+        childAspectRatio: 1 / 1.5),
       itemBuilder: (context, index) {
         return DonutTile(
           donutFlavor: donutsOnSale[index][0],
